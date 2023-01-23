@@ -4,6 +4,17 @@ var sekundy = 0;
 var licznik = document.getElementById('liczba')
 var wynik = document.getElementById('h2suck')
 
+function gra(){
+    kontener.style.display = "block";
+    witaj.style.display = "none";
+
+    setInterval(function dodawanieSekund() {
+        sekundy = sekundy + 1;
+        licznik.innerText = sekundy;
+        console.log(sekundy);
+    }, 1000);
+}
+
 function skok() {
     
     if(postac.classList != "animate") {
@@ -27,9 +38,3 @@ var sprawdzSmierc = setInterval(function() {
     }
 },10);
 
-
-setInterval(function dodawanieSekund() {
-    sekundy = sekundy + 1;
-    licznik.innerText = sekundy;
-    console.log(sekundy);
-}, 1000);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" onclick="skok()"> 
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +9,16 @@
     <title>Jumper</title>
 </head>
 <body>
+  <div id="witaj">
+    <h1 id="jumper">Jumper</h1>
+    <a id="description">A simple game in which you have to right click in order to jump over obstacle :)</a>
+    </br><a><button class="start" onclick="gra()">Wanna play?</button></a>
+  </div>
   <div id="suck">
-    <h1 id="h1suck">Well... You suck</h1>
+    <h1 id="h1suck">Well... You suck!</h1>
     <h2 id="h2suck">Score:</h2>
   </div>
-    <div id="kontener">
+    <div id="kontener" onclick="skok()">
         <div id="gra">
             <div id="licznik"><a id="liczba">0</a></div>
             <div id="postac"></div>
