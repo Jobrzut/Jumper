@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+#kontener {
+
+}
+
+#gra {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 500px;
+    border: 2px solid #008F11;
+}
+
+#licznik {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+}
+
+#liczba {
+    color: #008F11;
+}
+
+#postac {
+    width: 40px;
+    height: 100px;
+    background-color: #00FF41;
+    position: relative;
+    top: 383px;
+    left: 80px;
+}
+
+.animate{
+    animation: skok 500ms;
+}
+
+#suck {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#h1suck {
+    text-transform:uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100px;
+    color: #008F11;
+}
+
+#h2suck {
+    text-transform:uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    color: #008F11;
+}
+
+#przeszkoda{
+    width: 50px;
+    height: 50px;
+    background-color: #003B00;
+    position: relative;
+    top: 333px;
+    left: 950px;
+    animation: ruch_przeszkoda 1.5s infinite linear;
+}
+
+@keyframes ruch_przeszkoda {
+    0%{left: 950px;}
+    100%{left: 0px;}
+}
+
+@keyframes skok {
+    0% {top: 383px;}
+    30% {top: 320px;}
+    70% {top: 320px;}
+    100% {top: 383px;}
+}
