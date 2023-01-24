@@ -11,7 +11,6 @@ function gra(){
     setInterval(function dodawanieSekund() {
         sekundy = sekundy + 1;
         licznik.innerText = sekundy;
-        console.log(sekundy);
     }, 1000);
 }
 
@@ -26,6 +25,21 @@ function skok() {
     },500);
 
 }
+
+document.body.onkeyup = function(e) {
+    if (e.key == " " ||
+        e.code == "Space" ||      
+        e.keyCode == 32      
+    ) {
+        if(postac.classList != "animate") {
+            postac.classList.add("animate");
+        }
+    
+        setTimeout(function(){
+            postac.classList.remove("animate");
+        },500);
+    }
+  }
 
 var sprawdzSmierc = setInterval(function() {
     var gorapostaci = parseInt(window.getComputedStyle(postac).getPropertyValue("top"));
