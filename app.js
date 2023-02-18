@@ -4,16 +4,22 @@ var sekundy = 0;
 var licznik = document.getElementById('liczba')
 var wynik = document.getElementById('h2suck')
 
+// rozpoczyna gre
 function gra(){
+    sekundy = 0;
+    
     kontener.style.display = "block";
     witaj.style.display = "none";
+    suck.style.display = "none";
 
     setInterval(function dodawanieSekund() {
         sekundy = sekundy + 1;
         licznik.innerText = sekundy;
+        console.log(sekundy)
     }, 1000);
 }
 
+// dzieki niej skacze
 function skok() {
     
     if(postac.classList != "animate") {
@@ -25,7 +31,7 @@ function skok() {
     },500);
 
 }
-
+// dzieki niej dziala spacja jako skok
 document.body.onkeyup = function(e) {
     if (e.key == " " ||
         e.code == "Space" ||      
@@ -40,7 +46,7 @@ document.body.onkeyup = function(e) {
         },500);
     }
   }
-
+// sprawdza czy umarlem
 var sprawdzSmierc = setInterval(function() {
     var gorapostaci = parseInt(window.getComputedStyle(postac).getPropertyValue("top"));
     var lewaprzeszkody = parseInt(window.getComputedStyle(przeszkoda).getPropertyValue("left"));
@@ -51,4 +57,5 @@ var sprawdzSmierc = setInterval(function() {
         wynik.innerText = "Score: " + sekundy;
     }
 },10);
+
 

@@ -124,6 +124,30 @@
     animation: ruch_przeszkoda 1.5s infinite linear;
 }
 
+#suck button {
+    background-color: #008F11;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    transition-duration: 1s;
+    margin-top: 50px;
+}
+
+#suck button:hover {
+    background-color: #004b00;
+}
+
+#suck img {
+    width: 50px;
+    height: 50px;
+    background: none;
+}
+
+#again {
+    display: flex;
+    justify-content: center;
+}
+
 @keyframes ruch_przeszkoda {
     0%{left: 950px;}
     100%{left: 0px;}
